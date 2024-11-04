@@ -83,10 +83,37 @@ Non-Accepting States of L1 U L2 (union):
 - The final state when you find the intersection should be th final state of both DFAs. It should be the final states in both L1 and L2
 - In the given example, the final states both DFA are {A, D}. So the final state of the final DFA should be the combination of these two states. Therefore, the final state should be the `(AD)` state
 
+- In our case, the final state of our final DFA is the following:
+
+```
+Initial States of L1 ∩ L2 (intersection):
+{AC}
+
+Final states of L1 ∩ L2 (intersection):
+{AD} 
+
+Non-Accepting States of L1 ∩ L2 (intersection):
+{BC, BD}
+
+```
+
 ## if (operation == difference)
 - The final state when you find the difference should be the final of L1 and its pair should not be a final state of L2
 - In the given example, the only pair (state) that satisfies this condition is `(AC)` because `A` is a final state in L1 and `C` is only a Non-accepting state in L2. Therefore, only `AC` should be our final state
   
+- In our case, the final state of our final DFA is the following:
+
+```
+Initial States of L1 - L2 (difference):
+{AC}
+
+Final states of L1 - L2 (difference):
+{AC} 
+
+Non-Accepting States of L1 - L2 (difference):
+{AD, BC, BD}
+
+```
 
 #### Final DFA design
 
